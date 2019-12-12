@@ -10,6 +10,9 @@
 <body>
 
 <!-- Api information -->
+{% if ticker %}
+    {{ ticker}}
+{% endif %}
 
 {% if api  %}
     {% if api == 'Error Detected...' %}
