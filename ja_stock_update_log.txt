@@ -1,0 +1,18 @@
+                Key Legend:
+                -- = current version
+                 <-x_x-> = bug
+
+
+
+v0: initial commit
+v0.5: upgrade specs / reqs
+v2: cmd install for django / test running the server
+v3: updated user
+v4: further update for the user
+v5: added home / default page
+v6: added about & contact .html pages
+    will improve in later ver#
+v7: added {% %} content information -> 1st step for navi. bar, also created ja_stock_update_log.txt to see
+    the project progress/ be later used for README.txt in the near future
+--v8:
+
