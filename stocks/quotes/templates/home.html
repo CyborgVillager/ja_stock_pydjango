@@ -2,17 +2,12 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
 </head>
 <body>
-
-<h1>Hello world!!</h1>
-<br/>
-<br/>
-<br/>
 
 <!-- Api information -->
 
@@ -21,6 +16,42 @@
         There was a problem with your ticker symbol,
         please try again.
     {% else %}
+<br/>
+<center> <h1>{{ api.companyName }}</h1> </center>
+        Symbol: {{ api.symbol }}<br/>
+        Exchange: {{ api.primaryExchange }}<br/>
+
+    <h4>Price & Market</h4>
+        Latest Price: ${{ api.latestPrice }}<br/>
+        Previous Close: ${{ api.previousClose }}<br/>
+        Market Cap: ${{ api.marketCap }}<br/>
+        Previous Volume: {{ api.previousVolume }}<br/>
+        Previous Change: ${{ api.change }}<br/>
+        Percent Change: {{ api.changePercent }}%<br/>
+        Volume: {{ api.iexVolume}}<br/>
+        Average Total Volume: {{ api.avgTotalVolume}}<br/>
+
+
+    <h4>Bid Information</h4>
+        Bid Price: ${{ api.iexBidPrice }}<br/>
+        Bid Size: {{ api.iexBidSize}}<br/>
+
+       <h4>52 Week High & Low</h4>
+        52 Week High: {{ api.week52High}}<br/>
+        52 Week Low: {{ api.week52Low}}<br/>
+
+     <h4>Time</h4>
+        Latest Time: {{ api.latestTime }}<br/>
+        Latest Update :{{ api.latestUpdate}}<br/>
+        Real Time Size: {{ api.iexRealtimeSize }}<br/>
+
+
+    <h4>Market Availability</h4>
+        Market  : {{ api.isUSMarketOpen}}<br/>
+<br/>
+<br/>
+
+        <!--{{ api. }}<br/>-->
         <!-- api.items get specific info from the api for the stock -->
         {% for key, value in api.items %}
             {{ key }}: {{ value }}<br/>

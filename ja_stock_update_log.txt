@@ -17,5 +17,6 @@ v7: added {% %} content information -> 1st step for navi. bar, also created ja_s
 v8: Improved navigation
 v9: install requests, aquired api & api info was a success, data is rough at the moment
 v10: snippet apple api info for, update the api info results, better organized/human readable
---v11:
+v11: update stock info, will work on design, functiona - high prio.
+--v12:
 
