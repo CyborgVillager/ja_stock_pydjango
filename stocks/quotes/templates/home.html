@@ -16,10 +16,22 @@
 
 <!-- Api information -->
 
-{{ api }}
+{% if api  %}
+    {% if api == 'Error Detected...' %}
+        There was a problem with your ticker symbol,
+        please try again.
+    {% else %}
+        <!-- api.items get specific info from the api for the stock -->
+        {% for key, value in api.items %}
+            {{ key }}: {{ value }}<br/>
+        {% endfor %}
 
 
+    {% endif  %}
+{% endif  %}
+
+<!-- to get company name {{ api.companyName }}  -->
+<!-- to get company calcprice {{ api.calculationPrice }} , etc, etc -->
 </body>
-
 {% endblock %}
 </html>
