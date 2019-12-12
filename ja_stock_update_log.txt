@@ -22,5 +22,7 @@ v12: <!-- ticker is part of the name for the form, which will be used to search 
 if a user search for a stock, it will use ticker using the api-request. It will parse it if not it will return
 either error or the result depending if the user has search for a stock to see. Main update is in regarding to using
 ticker to allow user to search various co. on their stocks
---v13:
+v13: added add_stock.html
+--v13.5: pause
+v14:
 
