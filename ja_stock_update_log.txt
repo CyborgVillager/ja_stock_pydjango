@@ -15,5 +15,6 @@ v6: added about & contact .html pages
 v7: added {% %} content information -> 1st step for navi. bar, also created ja_stock_update_log.txt to see
     the project progress/ be later used for README.txt in the near future
 v8: Improved navigation
---v9:
+v9: install requests, aquired api & api info was a success, data is rough at the moment
+--v10:
 
