@@ -24,5 +24,5 @@ either error or the result depending if the user has search for a stock to see. 
 ticker to allow user to search various co. on their stocks
 v13: added add_stock.html
 --v13.5: pause
-v14:
+v14:unpause
 
