@@ -29,11 +29,15 @@ v15: db information , ticker symbol char length ,python manage.py makemigrations
 v16: regist models into the admin page and import models into admin.py
 v17: import Stock from models.py info to be used at line 27-31 line 27 -> def add_stock(request) -> connect views.py
 w/ models.py then pull information from db to be seen at add_stock.html
---v18:
-v19
+v18: added search feature at add_stock.html, made background gray 4 ease of eye -> @ base.html temp
+prob will make feature for an option for changing background if the user pleases. Allow user to add stock to add_stock.html
+--v19
 v20:
 v21:
 v22:
 v23:
+v24:
+v25:
+v26:
 
 
