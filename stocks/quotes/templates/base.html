@@ -14,8 +14,8 @@
   <body>
   <style>
       body{
-  background-color: #808080;
-}
+            background-color: #808080;
+      }
   </style>
 
 <!-- Navigation -->
@@ -52,6 +52,19 @@
 <!-- Navigation -->
 
    <div class="container">
+       {% if messages %}
+       {% for message in messages %}
+        <div class="alert alert-warning alert-dismissible" role="alert">
+            <a href="#" class="close" data-dismiss="alert"><sup><span style='font-size:15px;'>&#10060; </span></sup></a>
+        </button>
+            {{ message }}
+
+        </div><br/>
+       {% endfor %}
+       {% endif %}
+
+
+
        {% block content %}
        {% endblock %}
    </div>

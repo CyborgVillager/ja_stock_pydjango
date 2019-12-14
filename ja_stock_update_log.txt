@@ -33,8 +33,8 @@ v18: added search feature at add_stock.html, made background gray 4 ease of eye 
 prob will make feature for an option for changing background if the user pleases. Allow user to add stock to add_stock.html
 v19 Added delete function, modify it to have delete symbol instead of 'Delete Stock', bolded the stocks as well
 info on this add_stock.html, views.py, urls.py
---v20:
-v21:
+v20: Fixed message pop up for adding or deleting a stock
+--v21:
 v22:
 v23:
 v24:
