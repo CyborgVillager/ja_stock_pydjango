@@ -13,13 +13,50 @@
       <input class="form-control mr-sm-2" type="search" placeholder="Add Ticker to Portfolio" aria-label="Search" name="ticker" required="required">
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Add Stock</button>
     </form>
+<!-- SPACE between add stock & table-->
+<br/>
+<br/>
+<!-- SPACE between add stock & table End -->
+
+<!-- Table Head Option for the Stock -->
+<table class="table table-striped table-bordered table-hover">
+  <thead  class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+<!-- Table Head Option for the Stock END -->
+
+
 
 
 {% for item in ticker %}
-
 <b>{{ item }}</b> - <a href="{% url 'delete' item.id%}"> <span style='font-size:15px;'>&#10060; </span></a><br/>
     {% endfor %}
-
 </body>
 
 {% endblock %}

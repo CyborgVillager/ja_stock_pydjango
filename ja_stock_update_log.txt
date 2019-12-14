@@ -34,8 +34,8 @@ prob will make feature for an option for changing background if the user pleases
 v19 Added delete function, modify it to have delete symbol instead of 'Delete Stock', bolded the stocks as well
 info on this add_stock.html, views.py, urls.py
 v20: Fixed message pop up for adding or deleting a stock
---v21:
-v22:
+v21: table head option, modify its design add_stock.html, added space between add stock button and the table
+--v22:
 v23:
 v24:
 v25:
