@@ -47,15 +47,23 @@
     <tr>
     <h5>
         <th scope="col">Company Name</th>
+        <th scope="col">Symbol</th>
+      <th scope="col">Exchange</th>
     </h5>
     </tr>
   </thead>
-
     <!-- Basic Company Info Row Start pt1-->
      <tbody>
-    <tr>
-      <td>Name</td>
-    </tr>
+     {% for item in ticker %}
+     <tr>
+         <th scope="row"><b>{{ item }}</b></th>
+         <th scope="row"><b>{{ item }}</b></th>
+         <th scope="row"><b>{{ item }}</b></th>
+         <td><br><a href="{% url 'delete' item.id%}"> <span style='font-size:15px;'>&#10060; </span></a></br></td>
+     </tr>
+
+    {% endfor %}
+
      </tbody>
      <!-- Basic Company Info Row End pt1-->
  </table>
@@ -68,8 +76,7 @@
   <thead  class="thead-dark" >
     <tr>
     <h5>
-        <th scope="col">Symbol</th>
-      <th scope="col">Exchange</th>
+
     </h5>
     </tr>
   </thead>
