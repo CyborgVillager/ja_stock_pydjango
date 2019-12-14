@@ -25,5 +25,6 @@ ticker to allow user to search various co. on their stocks
 v13: added add_stock.html
 v13.5: pause
 v14:unpause
---v15:
+v15: db information , ticker symbol char length ,python manage.py makemigrations &  python manage.py migrate
+--v16:
 
