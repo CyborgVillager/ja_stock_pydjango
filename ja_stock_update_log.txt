@@ -31,8 +31,9 @@ v17: import Stock from models.py info to be used at line 27-31 line 27 -> def ad
 w/ models.py then pull information from db to be seen at add_stock.html
 v18: added search feature at add_stock.html, made background gray 4 ease of eye -> @ base.html temp
 prob will make feature for an option for changing background if the user pleases. Allow user to add stock to add_stock.html
---v19
-v20:
+v19 Added delete function, modify it to have delete symbol instead of 'Delete Stock', bolded the stocks as well
+info on this add_stock.html, views.py, urls.py
+--v20:
 v21:
 v22:
 v23:
