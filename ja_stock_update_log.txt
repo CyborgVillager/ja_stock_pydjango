@@ -24,11 +24,12 @@ either error or the result depending if the user has search for a stock to see. 
 ticker to allow user to search various co. on their stocks
 v13: added add_stock.html
 v13.5: pause
-v14:unpause
+v14: unpause
 v15: db information , ticker symbol char length ,python manage.py makemigrations &  python manage.py migrate
 v16: regist models into the admin page and import models into admin.py
---v17:
-v18:
+v17: import Stock from models.py info to be used at line 27-31 line 27 -> def add_stock(request) -> connect views.py
+w/ models.py then pull information from db to be seen at add_stock.html
+--v18:
 v19
 v20:
 v21:

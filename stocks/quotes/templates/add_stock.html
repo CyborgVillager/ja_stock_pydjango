@@ -9,6 +9,12 @@
 <body>
 <h1>Add Stock</h1>
 
+
+
+{% for item in ticker %}
+    {{ item }}<br/>
+    {% endfor %}
+
 </body>
 
 {% endblock %}

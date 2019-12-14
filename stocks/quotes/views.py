@@ -1,5 +1,7 @@
 from django.shortcuts import render
-
+#import Stock from models.py info to be used at line 27-31
+# line 27 -> def add_stock(request):  -update this comment if this comment is invalid
+from .models import Stock
 
 # Create your views here.
 
@@ -24,7 +26,11 @@ def home(request):
 
 
 def add_stock(request):
-    return render(request, 'add_stock.html', {})
+    #pull information from db
+    ticker = Stock.objects.all()
+    # old return render(request, 'add_stock.html', {})
+    return render(request, 'add_stock.html', {'ticker':ticker})
+
 
 
 def about(request):
