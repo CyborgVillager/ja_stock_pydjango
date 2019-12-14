@@ -26,5 +26,13 @@ v13: added add_stock.html
 v13.5: pause
 v14:unpause
 v15: db information , ticker symbol char length ,python manage.py makemigrations &  python manage.py migrate
---v16:
+v16: regist models into the admin page and import models into admin.py
+--v17:
+v18:
+v19
+v20:
+v21:
+v22:
+v23:
+
 
