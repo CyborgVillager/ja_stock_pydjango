@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Stock</title>
+</head>
+<body>
+<h1>Delete Stock</h1>
+{% if ticker %}
+    {% for item in ticker %}
+     <h4><b>{{ item }}</b> - <a href="{% url 'delete' item.id%}" onclick="return confirm('Are you sure you want to delete ' +
+      '{{ item }}?');"> <span style='font-size:20px;'>&#10060; </span></a></h4><br/>
+    {% endfor %}
+{% else %}
+    You dont have any stocks at the moment. Lets change that!!
+        <h2><a href="{% url 'add_stock' %}"> Add Stocks </a></h2>
+{% endif %}
+
+</body>
+{% endblock %}
+</html>

@@ -21,7 +21,7 @@
         please try again.
     {% else %}
 <br/>
-<center> <h1>{{ api.companyName }}</h1> </center>
+    <h1>{{ api.companyName }}</h1>
         Symbol: {{ api.symbol }}<br/>
         Exchange: {{ api.primaryExchange }}<br/>
 
@@ -34,7 +34,6 @@
         Percent Change: {{ api.changePercent }}%<br/>
         Volume: {{ api.iexVolume}}<br/>
         Average Total Volume: {{ api.avgTotalVolume}}<br/>
-
 
     <h4>Bid Information</h4>
         Bid Price: ${{ api.iexBidPrice }}<br/>
@@ -49,10 +48,11 @@
         Latest Update :{{ api.latestUpdate}}<br/>
         Real Time Size: {{ api.iexRealtimeSize }}<br/>
 
-
     <h4>Market Availability</h4>
         Market  : {{ api.isUSMarketOpen}}<br/>
 <br/>
+<!-- Give user option to add this stock, if they like what they see -->
+<h4><p>Want to add a this Stock?: <a href="{% url 'add_stock' %}"> Yes!!</a></p></h4>
 <br/>
 
         <!--{{ api. }}<br/>-->

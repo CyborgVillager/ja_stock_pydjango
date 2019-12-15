@@ -1,6 +1,6 @@
                 Key Legend:
                 -- = current version
-                -wor = working on this ver
+                -wor: = working on this ver
                  <-x_x-> = bug
 
 
@@ -41,8 +41,11 @@ v23.5: paused connecting data from db to be seen at add_stock.html
 v24: unpause connectiing to api viwws.py @ add_stock(request), connect to api , each time theres a ticker 'quote' or
 search obtain it from db, it will loop through / make a api call / decode the json, if fails put an error @ views.py /
 save the data chunks into a list
---v25: modifi.. add_stock now connected to api, data can be seen/ be read for humans, delete to be re-fixed <-x_x->
--wor:v26.5:
-v27:
+v25: modifi.. add_stock now connected to api, data can be seen/ be read for humans, delete to be re-fixed <-x_x->
+--:v26.5: fixed delete <-x_x->, modifi.. the design layout and added a feature if the user would like to add a stock
+if they like the stock ticker info after searching the ticker symbol. Also made a pop-up to ensure double confirm if the
+user would like to delete a stock or not.
+-wor:v27:
+v28:
 
 

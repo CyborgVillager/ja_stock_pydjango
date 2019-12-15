@@ -23,14 +23,7 @@
 <!-- SPACE between add stock & table End -->
 
 <!-- Table Head Option for the Stock -->
-<!-- Style Start-->
-<style>
-    h5{text-align:center;}
-    h4{text-align:center;  font-weight: bold;}
 
-
-    </style>
-<!-- Style End-->
 
 
 
@@ -47,7 +40,7 @@
         <th scope="col">Latest Price</th>
       <th scope="col">Previous Close</th>
       <th scope="col">Previous Volume</th>
-         <th scope="col">Delete Stock </th>
+
 
     </h5>
     </tr>
@@ -67,7 +60,7 @@
        <th scope="row"><b>${{ list_item.latestPrice }}</b></th>
        <th scope="row"><b>${{ list_item.previousClose }}</b></th>
        <th scope="row"><b>{{ list_item.previousVolume }}</b></th>
-        <td><br><a href="/"> <span style='font-size:15px;'>&#10060; </span></a></br></td>
+
          </tr>
       {% endfor %}
 
