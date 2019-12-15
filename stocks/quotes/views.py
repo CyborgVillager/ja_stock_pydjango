@@ -30,6 +30,9 @@ def home(request):
 
 # Fill out form
 def add_stock(request):
+    # getting information for the APi
+    import requests
+    import json
     # get stockform post info for message pop up
     if request.method == 'POST':
         form = StockForm(request.POST or None)
@@ -41,14 +44,32 @@ def add_stock(request):
     else:
         # pull information from db
         ticker = Stock.objects.all()
+        # save the data/ chunks into a list
+        output = []
+        # connect to api , each time theres a ticker 'quote' or search obtain it from db, it will loop through /
+        # make a api call / decode the json, if fails put an error
+
+        for ticker_item in ticker:
+            api_request = requests.get("https://cloud.iexapis.com/stable/stock/" + str(ticker_item)
+                                       + "/quote?token=pk_d5d97aef30904e3582a9badd3d0478b3")
+            try:
+                # getting the api data, after that parse the info, else show error
+                api = json.loads(api_request.content)
+                output.append(api)
+            except Exception as error:
+                api = 'Error, try again!'
+
+
         # old return render(request, 'add_stock.html', {})
-        return render(request, 'add_stock.html', {'ticker': ticker})
+        return render(request, 'add_stock.html', {'ticker': ticker, 'output':output})
+
 
 def delete(request, stock_id):
     item = Stock.objects.get(pk=stock_id)
     item.delete()
     messages.success(request, ("Stock has been Deleted!"))
     return redirect(add_stock)
+
 
 def about(request):
     return render(request, 'about.html', {})

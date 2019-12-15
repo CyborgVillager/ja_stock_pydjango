@@ -49,11 +49,14 @@
         <th scope="col">Company Name</th>
         <th scope="col">Symbol</th>
       <th scope="col">Exchange</th>
+      <th scope="col">Delete Stock </th>
     </h5>
     </tr>
   </thead>
     <!-- Basic Company Info Row Start pt1-->
      <tbody>
+
+    {% if ticker %}
      {% for item in ticker %}
      <tr>
          <th scope="row"><b>{{ item }}</b></th>
@@ -63,6 +66,8 @@
      </tr>
 
     {% endfor %}
+
+    {% endif %}
 
      </tbody>
      <!-- Basic Company Info Row End pt1-->
@@ -82,10 +87,7 @@
   </thead>
       <!-- Basic Company Info Start pt2-->
      <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-    </tr>
+
      </tbody>
       <!-- Basic Company Info Row  End pt2-->
  </table>
@@ -212,6 +214,27 @@
 </body>
 <br/>
 <br/>
+{% for list_item in output %}
+    {{ list_item.companyName}}<br/>
+    {{ list_item.symbol }}<br/>
+    {{ list_item.primaryExchange }}<br/>
+    ${{ list_item.latestPrice }}<br/>
+    ${{ list_item.previousClose }}<br/>
+    ${{ list_item.marketCap }}<br/>
+    {{ list_item.previousVolume }}<br/>
+    ${{ list_item.change }}<br/>
+    {{ list_item.changePercent }}%<br/>
+    {{ list_item.iexVolume}}<br/>
+    {{ list_item.avgTotalVolume}}<br/>
+    ${{ list_item.iexBidPrice }}<br/>
+    {{ list_item.iexBidSize}}<br/>
+    {{ list_item.week52High}}<br/>
+    {{ list_item.week52Low}}<br/>
+    {{ list_item.latestTime }}<br/>
+    {{ list_item.latestUpdate}}<br/>
+    {{ list_item.iexRealtimeSize }}<br/>
+    {{ list_item.isUSMarketOpen}}<br/><br/>
+{% endfor %}
 <!--Back to top of page-->
 <a href="#top" ><p align="right">Back to top</p></a>
 <!--Back to top of page-->

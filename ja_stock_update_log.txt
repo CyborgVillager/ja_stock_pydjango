@@ -36,9 +36,12 @@ info on this add_stock.html, views.py, urls.py
 v20: Fixed message pop up for adding or deleting a stock
 v21: table head option, modify its design add_stock.html, added space between add stock button and the table
 v22: customized the colums/rows @ add_stock.html - organizing stock data for better human readability,work in prog
---v23: paused connecting data from db to be seen at add_stock.html
-v24:
-v25:
+v23.5: paused connecting data from db to be seen at add_stock.html
+v24: unpause connectiing to api viwws.py @ add_stock(request), connect to api , each time theres a ticker 'quote' or
+search obtain it from db, it will loop through / make a api call / decode the json, if fails put an error @ views.py /
+save the data chunks into a list
+--v25:
 v26:
+v27:
 
 
